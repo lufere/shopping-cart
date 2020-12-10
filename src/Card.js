@@ -3,6 +3,11 @@ import './card.css'
 
 const Card = props =>{
     const [quantity, setQuantity] = useState(0);
+    
+    function downCount(){
+        if(quantity>0)setQuantity(quantity-1)
+    }
+
     return(
         <div className='card'>
             <header>{props.title}</header>
@@ -12,12 +17,12 @@ const Card = props =>{
             />
             <footer>
                 <p>{props.price}</p>
-                <button>Add</button>
                 <div>
-                    <button onClick={()=>setQuantity(quantity-1)}>-</button>
+                    <button onClick={downCount}>-</button>
                     <p>{quantity}</p>
                     <button onClick={()=>setQuantity(quantity+1)}>+</button>
                 </div>
+                <button>Add</button>
             </footer>
         </div>
     );
