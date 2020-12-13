@@ -18,9 +18,13 @@
     color: black;
 }
 
-.navHeader > img{
+#logo > img{
     height: 60px;
     padding: 10px;
+}
+
+#logo{
+    border: none;
 }
 
 .cartStatus{

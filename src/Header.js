@@ -4,10 +4,12 @@ import './header.css';
 const Header = props => {
     return(
         <header className='navHeader'>
-            <img
-                alt='Logo'
-                src='https://icons-for-free.com/iconfiles/png/512/vinyl-131994967757554091.png'
-            />
+            <a id='logo' href='/'>
+                <img
+                    alt='Logo'
+                    src='https://icons-for-free.com/iconfiles/png/512/vinyl-131994967757554091.png'
+                />
+            </a>
             <a href='/products'>PRODUCTS</a>
             <div className='cartStatus'>
                 <p>{props.cart.length}</p>
