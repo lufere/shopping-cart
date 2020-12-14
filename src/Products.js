@@ -25,6 +25,7 @@ const Products = props =>{
             img = 'https://upload.wikimedia.org/wikipedia/en/b/ba/Radioheadokcomputer.png'
             price = '20'
         />
+        {props.history.location.state?.test}
       </div>
     </div>
   );

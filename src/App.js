@@ -4,12 +4,13 @@ import Header from './Header';
 // import Header from './Header';
 import Products from './Products';
 
-function App() {
+function App(props) {
   return (
     <div>
       <Header
         cart={[1,2,3]}
       />
+      <button onClick={()=>props.history.push('/products', {test:'works'})}>TEST</button>
     </div>
   );
 }
