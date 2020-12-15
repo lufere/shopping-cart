@@ -10,7 +10,7 @@ const Header = props => {
                     src='https://icons-for-free.com/iconfiles/png/512/vinyl-131994967757554091.png'
                 />
             </a>
-            <a href='/products'>PRODUCTS</a>
+            <a href='/shop'>SHOP</a>
             <div className='cartStatus'>
                 <p>{props.cart.length}</p>
                 <img

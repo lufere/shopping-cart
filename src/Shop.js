@@ -1,14 +1,11 @@
 import React from 'react';
 import Card from './Card';
 import Header from './Header';
-import './products.css'
+import './shop.css'
 
-const Products = props =>{
+const Shop = props =>{
   return (
     <div>
-      <Header
-        cart={[1,2,3]}
-      />
       <div className='products'>
         <Card
             title='In Rainbows'
@@ -25,10 +22,11 @@ const Products = props =>{
             img = 'https://upload.wikimedia.org/wikipedia/en/b/ba/Radioheadokcomputer.png'
             price = '20'
         />
-        {props.history.location.state?.test}
+        {props.qty}
+        {/* {props.history.location.state?.test} */}
       </div>
     </div>
   );
 }
 
-export default Products
+export default Shop

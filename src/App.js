@@ -2,15 +2,12 @@ import React from 'react';
 import Header from './Header';
 // import Card from './Card';
 // import Header from './Header';
-import Products from './Products';
+import Shop from './Shop';
 
 function App(props) {
   return (
     <div>
-      <Header
-        cart={[1,2,3]}
-      />
-      <button onClick={()=>props.history.push('/products', {test:'works'})}>TEST</button>
+      {/* <button onClick={()=>props.history.push('/shop', {test:'works'})}>TEST</button> */}
     </div>
   );
 }
