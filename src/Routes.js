@@ -5,11 +5,31 @@ import Shop from './Shop';
 import Header from './Header';
 
 const Routes = () => {
-    const [cartQty, setCartQty] = useState(3);
+    const [cart, setCart] = useState([
+        {title:'In Rainbows',
+        img: 'https://upload.wikimedia.org/wikipedia/en/1/14/Inrainbowscover.png',
+        price: '30',
+        cardQty:0,
+        qty:0,
+        id:'rhIR',},
+        {title:'A Moon Shaped Pool',
+        img: 'https://images-na.ssl-images-amazon.com/images/I/815bmGN5LML._AC_SL1200_.jpg',
+        price: '20',
+        cardQty:0,
+        qty:0,
+        id:'rhAMSP',},
+        {title:'Ok Computer',
+        img: 'https://upload.wikimedia.org/wikipedia/en/b/ba/Radioheadokcomputer.png',
+        price: '100',
+        cardQty:0,
+        qty:0,
+        id:'rhOKC',},
+    ]);
+    
     return(
         <BrowserRouter>
         <Header
-        cart={[1,2,3]}
+        cart={[1,2,3,4]}
         />
             <Switch>
                 <Route exact path='/'>
@@ -17,7 +37,7 @@ const Routes = () => {
                 </Route>
                 <Route exact path='/shop'>
                     <Shop
-                        qty={cartQty}
+                        products={cart}
                     />
                 </Route>
             </Switch>
