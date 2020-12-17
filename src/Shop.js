@@ -9,6 +9,8 @@ const Shop = props =>{
       title={album.title}
       img={album.img}
       price={album.price}
+      quantity={album.cardQty}
+      id={album.id}
     />
   })
   return (

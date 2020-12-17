@@ -29,7 +29,7 @@ const Routes = () => {
     return(
         <BrowserRouter>
         <Header
-        cart={[1,2,3,4]}
+        cart={cart}
         />
             <Switch>
                 <Route exact path='/'>

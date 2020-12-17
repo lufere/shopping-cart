@@ -1,27 +1,23 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './card.css'
 
 const Card = props =>{
-    const [quantity, setQuantity] = useState(0);
-    
-    function downCount(){
-        if(quantity>0)setQuantity(quantity-1)
-    }
-
     return(
-        <div className='card'>
+        <div className='card' id={props.id}>
             <header>{props.title}</header>
             <img
                 alt={props.title}
                 src={props.img}
             />
             <footer>
-                <p>{props.price}</p>
-                <div>
-                    <button onClick={downCount}>-</button>
-                    <p>{quantity}</p>
-                    <button onClick={()=>setQuantity(quantity+1)}>+</button>
-                </div>
+                <p>{props.price}$</p>
+                <select type='select' name='quantity'>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                </select>
                 <button>Add</button>
             </footer>
         </div>
