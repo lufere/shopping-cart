@@ -31,7 +31,7 @@
     padding: 10px 0;
 }
 
-select{
+.card > footer > form> input{
     width: 40px;
     display: flex;
     font-size: 15px;
@@ -39,4 +39,8 @@ select{
     background-color: white;
     text-align: center;
     border: 1px solid black;
+}
+
+.card > footer>  form{
+    display: flex;
 }

@@ -3,7 +3,7 @@ import './card.css'
 
 const Card = props =>{
     return(
-        <div className='card' id={props.id}>
+        <div className='card'>
             <header>{props.title}</header>
             <img
                 alt={props.title}
@@ -11,14 +11,10 @@ const Card = props =>{
             />
             <footer>
                 <p>{props.price}$</p>
-                <select type='select' name='quantity'>
-                    <option value='1'>1</option>
-                    <option value='2'>2</option>
-                    <option value='3'>3</option>
-                    <option value='4'>4</option>
-                    <option value='5'>5</option>
-                </select>
-                <button>Add</button>
+                <form id={props.id}>
+                    <input type='number' name='quantity' defaultValue='1' min='1'></input>
+                    <button type='submit' onClick={props.addToCart}>Add</button>
+                </form>
             </footer>
         </div>
     );

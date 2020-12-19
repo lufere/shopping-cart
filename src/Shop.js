@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from './Card';
-import Header from './Header';
 import './shop.css'
 
 const Shop = props =>{
@@ -9,8 +8,9 @@ const Shop = props =>{
       title={album.title}
       img={album.img}
       price={album.price}
-      quantity={album.cardQty}
       id={album.id}
+      key={album.id}
+      addToCart={props.addToCart}
     />
   })
   return (
