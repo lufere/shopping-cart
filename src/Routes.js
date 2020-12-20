@@ -3,6 +3,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import App from './App';
 import Shop from './Shop';
 import Header from './Header';
+import Checkout from './Checkout';
 
 const Routes = () => {
     const [cart, setCart] = useState([
@@ -26,12 +27,18 @@ const Routes = () => {
     const addToCart = (e)=>{
         e.preventDefault();
         let id = e.currentTarget.parentElement.id;
-        let quantity = e.currentTarget.parentElement.quantity.value;
-        let pos = cart.findIndex(e => e.id===id);
-        let newCart = [...cart];
-        newCart[pos].qty=parseInt(newCart[pos].qty)+parseInt(quantity);
-        setCart(newCart);
-        console.log(cart);
+        let cardQty = parseInt(e.currentTarget.parentElement.quantity.value);
+        setCart(
+            cart.map((item)=>{
+                if (item.id===id) return({...item, qty:item.qty+cardQty})
+                return item
+            })
+        );
+        // let pos = cart.findIndex(e => e.id===id);
+        // let newCart = [...cart];
+        // newCart[pos].qty=parseInt(newCart[pos].qty)+parseInt(cardQty);
+        // setCart(newCart);
+        // console.log(cart.map(item=>item.qty));
     }
 
     return(
@@ -47,6 +54,11 @@ const Routes = () => {
                     <Shop
                         products={cart}
                         addToCart={addToCart}
+                    />
+                </Route>
+                <Route exact path='/checkout'>
+                    <Checkout
+                        products={cart}
                     />
                 </Route>
             </Switch>
