@@ -1,4 +1,5 @@
 import React from 'react';
+import './checkout.css'
 
 const Checkout = props => {
     var cartItems = props.products.filter(album=>album.qty>0);

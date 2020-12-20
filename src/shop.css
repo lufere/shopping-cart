@@ -1,5 +1,7 @@
 .products{
     display: flex;
     justify-content: space-around;
-    margin-top: 50px;
+    padding-top: 50px;
+    background-color: #eadfb1;
+    height: 90vh;
 }

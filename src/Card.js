@@ -13,7 +13,7 @@ const Card = props =>{
                 <p>{props.price}$</p>
                 <form id={props.id}>
                     <input type='number' name='quantity' defaultValue='1' min='1'></input>
-                    <button type='submit' onClick={props.addToCart}>Add</button>
+                    <button type='submit' onClick={props.addToCart}></button>
                 </form>
             </footer>
         </div>

@@ -18,7 +18,7 @@ const Header = props => {
                 <p>{cartQty}</p>
                 <img
                     alt='Shopping Cart'
-                    src='https://image.flaticon.com/icons/png/512/126/126083.png'
+                    src='https://icon-library.com/images/white-shopping-cart-icon/white-shopping-cart-icon-9.jpg'
                 />
             </Link>
             

@@ -1,9 +1,9 @@
 .navHeader{
-    background-color: gray;
+    background-color: #a83f2c;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: calc(10vh - 4px);
+    height: 10vh;
     border-bottom: 4px solid black;
 }
 
@@ -11,22 +11,27 @@
     text-decoration: none;
     font-size: 20px;
     font-weight: 700;
-    border: 2px solid black;
+    border: 1px solid black;
+    border-radius: 7px;
     padding: 8px;
+    background-color: #2e6260;
+    color: white;
 }
 
 .navHeader > a:visited{
     text-decoration: none;
-    color: black;
+    color: rgb(240, 240, 240);
 }
 
 #logo > img{
     height: 60px;
+    background-color: transparent;
     /* padding: 10px; */
 }
 
 #logo{
     border: none;
+    background-color: transparent;
 }
 
 .cartStatus{
