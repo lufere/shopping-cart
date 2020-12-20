@@ -1,5 +1,61 @@
-div{
+.checkout{
     background-color: #eadfb1;
     height: 90vh;
     text-align: center;
+    display: flex;
+}
+
+.cartItems{
+    /* border: 1px solid blue; */
+    width: 75vw;
+}
+
+.total{
+    /* border: 1px solid red; */
+    border-left: 2px solid black;
+    width: 25vw;
+}
+
+h1{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 15px 0;
+    background-color: #d3b332;
+}
+
+.checkoutRow{
+    display: flex;
+    justify-content: space-around;
+    background-color: #dbc25d;
+}
+
+.checkoutRow>p{
+    border: 1px solid black;
+    padding: 10px 0;
+}
+
+.checkoutRow>p:first-child{
+    width: 70%;
+    font-weight: 700;
+}
+
+.checkoutRow > p:nth-child(2){
+    width: 12%;
+}
+
+.checkoutRow > p:nth-child(3){
+    width: 18%;
+}
+
+.payment{
+    border: none;
+    padding: 10px 5px;
+    margin-top: 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #2e6260;
+    border: 2px solid #162e2d;
+    border-radius: 5px;
+    cursor: pointer;
 }

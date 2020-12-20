@@ -4,15 +4,36 @@ import './checkout.css'
 const Checkout = props => {
     var cartItems = props.products.filter(album=>album.qty>0);
     var results = cartItems.map((album)=>{
-        return <li key={album.id}>{`${album.title}, ${album.qty}, ${album.qty*album.price}$`}</li>
+        // return <li key={album.id}>{`${album.title}, ${album.qty}, ${album.qty*album.price}$`}</li>
+        return <div className='checkoutRow'>
+                    <p>{album.title}</p>
+                    <p>{album.qty}</p>
+                    <p>{album.qty*album.price}$</p>
+                </div>
     });
     var total = cartItems.reduce((accumulator,currentVal)=>accumulator+(currentVal.qty*currentVal.price),0);
     return(
-        <div>
-            <ul>
-                {results}
-            </ul>
-                Total: {total}$
+        <div className='checkout'>
+            <div className='cartItems'>
+
+            </div>
+            <div className='total'>
+                <h1>CHECKOUT</h1>
+                <div className='checkoutRow'>
+                    <p>Album</p>
+                    <p>Qty</p>
+                    <p>Price</p>
+                </div>
+                <ul>
+                    {results}
+                </ul>
+                <div className='checkoutRow'>
+                    <p>TOTAL</p>
+                    <p></p>
+                    <p>{total}$</p>
+                </div>
+                <button className='payment'>Proceed to payment</button>
+            </div>
         </div>
     );
 }
