@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './header.css';
 
 const Header = props => {
     const cartQty = props.cart.reduce((accumulator,value)=>accumulator+value.qty,0);
     return(
         <header className='navHeader'>
-            <a id='logo' href='/'>
+            <Link id='logo' to='/'>
                 <img
                     alt='Logo'
                     src='https://icons-for-free.com/iconfiles/png/512/vinyl-131994967757554091.png'
                 />
-            </a>
-            <a href='/shop'>SHOP</a>
+            </Link>
+            <Link to='/shop'>SHOP</Link>
             <div className='cartStatus'>
                 <p>{cartQty}</p>
                 <img

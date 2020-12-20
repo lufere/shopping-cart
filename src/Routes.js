@@ -36,9 +36,9 @@ const Routes = () => {
 
     return(
         <BrowserRouter>
-        <Header
-        cart={cart}
-        />
+            <Header
+                cart={cart}
+            />
             <Switch>
                 <Route exact path='/'>
                     <App/>
