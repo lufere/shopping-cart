@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import App from './App';
+import Welcome from './Welcome';
 import Shop from './Shop';
 import Header from './Header';
 import Checkout from './Checkout';
@@ -48,7 +48,7 @@ const Routes = () => {
             />
             <Switch>
                 <Route exact path='/'>
-                    <App/>
+                    <Welcome/>
                 </Route>
                 <Route exact path='/shop'>
                     <Shop
