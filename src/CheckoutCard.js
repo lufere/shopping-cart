@@ -1,0 +1,32 @@
+import React from 'react';
+import './checkoutCard.css';
+
+const CheckoutCard = props =>{
+    return(
+        <div className='checkoutCard'>
+            <img
+                alt={props.title}
+                src={props.img}
+            />
+            <div className='cartCardInfo'>
+                <h2>{props.title}</h2>
+                <div>
+                    <p>{props.price}$</p>
+                    <div className='cartButtons'>
+                        <button>-</button>
+                        <p>{props.qty}</p>
+                        <button>+</button>
+                    </div>
+                    <div className='remove'>
+                        <img
+                            alt='Remove item from cart'
+                            src='https://cdn4.iconfinder.com/data/icons/social-messaging-ui-coloricon-1/21/52-512.png'
+                        ></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default CheckoutCard

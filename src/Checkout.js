@@ -1,5 +1,6 @@
 import React from 'react';
-import './checkout.css'
+import './checkout.css';
+import CheckoutCard from './CheckoutCard';
 
 const Checkout = props => {
     var cartItems = props.products.filter(album=>album.qty>0);
@@ -11,11 +12,19 @@ const Checkout = props => {
                     <p>{album.qty*album.price}$</p>
                 </div>
     });
+    var cartCards = cartItems.map((card)=>{
+        return <CheckoutCard
+            img = {card.img}
+            title = {card.title}
+            price = {card.price}
+            qty = {card.qty}
+        />
+    })
     var total = cartItems.reduce((accumulator,currentVal)=>accumulator+(currentVal.qty*currentVal.price),0);
     return(
         <div className='checkout'>
             <div className='cartItems'>
-
+                {cartCards}
             </div>
             <div className='total'>
                 <h1>CHECKOUT</h1>
