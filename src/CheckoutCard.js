@@ -10,14 +10,14 @@ const CheckoutCard = props =>{
             />
             <div className='cartCardInfo'>
                 <h2>{props.title}</h2>
-                <div>
+                <div id={props.id}>
                     <p>{props.price}$</p>
-                    <div className='cartButtons' id={props.id}>
-                        <button className='-' onClick={props.onClick}>-</button>
+                    <div className='cartButtons'>
+                        <button className='-' onClick={props.modify}>-</button>
                         <p>{props.qty}</p>
-                        <button className='+' onClick={props.onClick}>+</button>
+                        <button className='+' onClick={props.modify}>+</button>
                     </div>
-                    <div className='remove'>
+                    <div className='remove' onClick={props.remove}>
                         <img
                             alt='Remove item from cart'
                             src='https://cdn4.iconfinder.com/data/icons/social-messaging-ui-coloricon-1/21/52-512.png'

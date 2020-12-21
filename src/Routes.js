@@ -42,7 +42,7 @@ const Routes = () => {
     }
 
     const checkoutModify = (e) => {
-        let id = e.target.parentElement.id;
+        let id = e.target.parentElement.parentElement.id;
         let operation = e.target.className;
         setCart(
             cart.map((item)=>{
@@ -53,7 +53,12 @@ const Routes = () => {
                 }
                 return item
             })
-        )
+        );
+    }
+
+    const removeFromCart = (e) => {
+        let id = e.currentTarget.parentElement.id;
+        setCart(cart.map((item)=>item.id===id?{...item,qty:0}:item));
     }
 
     return(
@@ -73,8 +78,9 @@ const Routes = () => {
                 </Route>
                 <Route exact path='/checkout'>
                     <Checkout
-                        products={cart}
-                        onClick={checkoutModify}
+                        products = {cart}
+                        modify = {checkoutModify}
+                        remove = {removeFromCart}
                     />
                 </Route>
             </Switch>

@@ -20,7 +20,8 @@ const Checkout = props => {
             price = {card.price}
             qty = {card.qty}
             id = {card.id}
-            onClick = {props.onClick}
+            modify = {props.modify}
+            remove = {props.remove}
         />
     })
     var total = cartItems.reduce((accumulator,currentVal)=>accumulator+(currentVal.qty*currentVal.price),0);
