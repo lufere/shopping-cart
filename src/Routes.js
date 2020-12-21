@@ -41,6 +41,21 @@ const Routes = () => {
         // console.log(cart.map(item=>item.qty));
     }
 
+    const checkoutModify = (e) => {
+        let id = e.target.parentElement.id;
+        let operation = e.target.className;
+        setCart(
+            cart.map((item)=>{
+                if(item.id === id){
+                    if(operation==='+') item.qty++;
+                    if(operation==='-') item.qty--;
+                    return item
+                }
+                return item
+            })
+        )
+    }
+
     return(
         <BrowserRouter>
             <Header
@@ -59,6 +74,7 @@ const Routes = () => {
                 <Route exact path='/checkout'>
                     <Checkout
                         products={cart}
+                        onClick={checkoutModify}
                     />
                 </Route>
             </Switch>

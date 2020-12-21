@@ -12,10 +12,10 @@ const CheckoutCard = props =>{
                 <h2>{props.title}</h2>
                 <div>
                     <p>{props.price}$</p>
-                    <div className='cartButtons'>
-                        <button>-</button>
+                    <div className='cartButtons' id={props.id}>
+                        <button className='-' onClick={props.onClick}>-</button>
                         <p>{props.qty}</p>
-                        <button>+</button>
+                        <button className='+' onClick={props.onClick}>+</button>
                     </div>
                     <div className='remove'>
                         <img

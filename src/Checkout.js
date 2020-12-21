@@ -6,7 +6,7 @@ const Checkout = props => {
     var cartItems = props.products.filter(album=>album.qty>0);
     var results = cartItems.map((album)=>{
         // return <li key={album.id}>{`${album.title}, ${album.qty}, ${album.qty*album.price}$`}</li>
-        return <div className='checkoutRow'>
+        return <div className='checkoutRow' key={album.id}>
                     <p>{album.title}</p>
                     <p>{album.qty}</p>
                     <p>{album.qty*album.price}$</p>
@@ -14,10 +14,13 @@ const Checkout = props => {
     });
     var cartCards = cartItems.map((card)=>{
         return <CheckoutCard
+            key={card.id}
             img = {card.img}
             title = {card.title}
             price = {card.price}
             qty = {card.qty}
+            id = {card.id}
+            onClick = {props.onClick}
         />
     })
     var total = cartItems.reduce((accumulator,currentVal)=>accumulator+(currentVal.qty*currentVal.price),0);
