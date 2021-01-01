@@ -1,7 +1,9 @@
 .welcome{
     /* background-image: url('https://black-buddha.com/sites/default/files/styles/mast/public/images/Vinyl_Hero_07_0.jpg?itok=RqpLltjO'); */
     background-image: url('https://img.wallpapersafari.com/desktop/1366/768/45/33/5ZkP3z.jpg');
+    background-repeat: no-repeat;
     background-color: black;
+    background-size: cover;
     height: 90vh;
     display: flex;
     justify-content: center;
